@@ -249,7 +249,7 @@ const Contact = () => {
         viewport={{ once: true }}
         className="text-center mb-24"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#C7A35A]">
           Get in Touch
         </h2>
         <p className="text-gray-300 mt-4 max-w-xl mx-auto">
@@ -272,7 +272,7 @@ const Contact = () => {
             reality with clean, modern, and user-friendly designs.
           </p>
 
-          <p className="text-gray-400 mb-2 font-medium">Email</p>
+          <p className="text-[#C7A35A] mb-2 font-medium">Email</p>
           <a
             href="mailto:amirimadina2@gmail.com"
             className="text-white font-medium hover:underline"
@@ -287,21 +287,21 @@ const Contact = () => {
             <a
               href="https://github.com/MadinaAmiri123"
               target="_blank"
-              className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
+              className="w-12 h-12 bg-white/20 text-[#C7A35A] rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
             >
               <FaGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/madina-amiri/"
               target="_blank"
-              className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
+              className="w-12 h-12 bg-white/20 text-[#C7A35A] rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
             >
               <FaLinkedinIn />
             </a>
             <a
               href="https://wa.me/"
               target="_blank"
-              className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
+              className="w-12 h-12 bg-white/20 text-[#C7A35A] rounded-full flex items-center justify-center hover:scale-110 transition-shadow shadow-lg"
             >
               <FaWhatsapp />
             </a>
@@ -320,20 +320,20 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="space-y-6 relative
               bg-white/20 backdrop-blur-3xl
-              border border-white/30
+              border border-white/30 
               rounded-3xl p-12 shadow-xl
               before:absolute before:inset-0 before:rounded-3xl before:bg-white/10 before:backdrop-blur-2xl before:-z-10"
           >
             {/* Name */}
             <div>
-              <label className="text-sm text-gray-800">Name</label>
+              <label className="text-sm text-gray-800 font-bold">Name</label>
               <input
                 type="text"
                 name="name"
                 required
                 placeholder="Your full name"
                 className="w-full mt-2 px-5 py-3 rounded-xl
-                  bg-white/20 backdrop-blur border border-white/30
+                  bg-white/69 backdrop-blur border border-white/30
                   outline-none focus:bg-white/30
                   focus:shadow-[0_0_25px_rgba(255,255,255,0.3)]
                   transition-all duration-300 text-gray-900"
@@ -342,14 +342,14 @@ const Contact = () => {
 
             {/* Email */}
             <div>
-              <label className="text-sm text-gray-800">Email</label>
+              <label className="text-sm text-gray-800 font-bold">Email</label>
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="Your email address"
                 className="w-full mt-2 px-5 py-3 rounded-xl
-                  bg-white/20 backdrop-blur border border-white/30
+                  bg-white/69 backdrop-blur border border-white/30
                   outline-none focus:bg-white/30
                   focus:shadow-[0_0_25px_rgba(255,255,255,0.3)]
                   transition-all duration-300 text-gray-900"
@@ -358,14 +358,14 @@ const Contact = () => {
 
             {/* Message */}
             <div>
-              <label className="text-sm text-gray-800">Message</label>
+              <label className="text-sm text-gray-800 font-bold">Message</label>
               <textarea
                 name="message"
                 rows="5"
                 required
                 placeholder="Write your message..."
                 className="w-full mt-2 px-5 py-3 rounded-xl
-                  bg-white/20 backdrop-blur border border-white/30
+                  bg-white/69 backdrop-blur border border-white/30
                   outline-none resize-none
                   focus:bg-white/30
                   focus:shadow-[0_0_25px_rgba(255,255,255,0.3)]
@@ -379,7 +379,7 @@ const Contact = () => {
               whileTap={{ scale: 0.97 }}
               disabled={loading}
               type="submit"
-              className="w-full py-3 rounded-full
+              className="w-full py-3 rounded-full border
                 bg-white/50 text-[#0F3F3A] font-medium tracking-wide
                 disabled:opacity-50 shadow-md hover:shadow-lg transition-all duration-300"
             >

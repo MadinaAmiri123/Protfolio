@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import realEstate from "../assets/realestate.svg";
-import furniture from "../assets/Furniture.svg";
-import courses from "../assets/Courses.svg";
+import realEstate from "../assets/Real.png";
+import Adei from "../assets/Adei.png";
+import Elearning from "../assets/Elearning.png";
 import { FaFigma } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
 
 const projects = [
   {
     title: "Real Estate",
     image: realEstate,
-    figma:
-      "https://www.figma.com/design/qepK4mhKvnvaB5poJddAFZ/Untitled?node-id=0-1&p=f&t=4XPbk3N07qUfWocn-0",
+    figma: "https://real-estate-l4wp.vercel.app/",
     description:
       "A complete real estate web platform designed with UI/UX principles in mind. Includes property listings, search filters, user-friendly interface, and interactive features.",
   },
   {
-    title: "Furniture",
-    image: furniture,
+    title: "Elearning Page",
+    image: Elearning,
     figma:
-      "https://www.figma.com/design/qepK4mhKvnvaB5poJddAFZ/Untitled?node-id=0-1&p=f&t=4XPbk3N07qUfWocn-0",
+      "https://www.figma.com/design/kqccNWZpp1f6IjswuYLiTT/My-UI-projects?t=08ut8GQhPGUSoQ02-0",
     description:
-      "An e-commerce furniture platform designed to enhance user experience. Features include product showcase, responsive layout, interactive 3D previews, and smooth navigation.",
+      "A modern e-learning platform UI focused on clear course structure, intuitive navigation, and an engaging learning experience for students and instructors.",
   },
   {
-    title: "Courses",
-    image: courses,
+    title: "Adei Hospital",
+    image: Adei,
     figma:
-      "https://www.figma.com/design/qepK4mhKvnvaB5poJddAFZ/Untitled?node-id=0-1&p=f&t=4XPbk3N07qUfWocn-0",
+      "https://www.figma.com/design/kqccNWZpp1f6IjswuYLiTT/My-UI-projects?t=08ut8GQhPGUSoQ02-0",
     description:
-      "A learning management system designed to make course access simple and intuitive. Includes interactive dashboards, course progress tracking, and responsive design.",
+      "A hospital and healthcare website UI designed to present medical services clearly, improve patient accessibility, and build trust through a clean, professional interface.",
   },
 ];
 
@@ -72,11 +72,11 @@ const Projects = () => {
                 group-hover:scale-105"
               />
 
-              {/* Overlay for text */}
+              {/* Overlay */}
               <div
                 className="absolute inset-0 bg-[#0A0A0A]/80 text-white font-simebold p-6
-                  opacity-0 group-hover:opacity-100 transition-opacity flex flex-col
-                  justify-center rounded-t-3xl"
+                opacity-0 group-hover:opacity-100 transition-opacity flex flex-col
+                justify-center rounded-t-3xl"
               >
                 <div className="overflow-y-auto max-h-[calc(100%-60px)] scrollbar-hide">
                   <p className="text-base leading-relaxed">
@@ -86,22 +86,24 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Footer (name + Figma) */}
+            {/* Footer */}
             <div
-              className="px-6 py-5 flex items-center justify-between 
+              className="px-6 py-5 flex items-center justify-between
               bg-white/20 backdrop-blur-md border-t border-[#C7A35A]/50"
             >
               <h3 className="text-white font-semibold text-lg">
                 {project.title}
               </h3>
+
               <a
                 href={project.figma}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 flex items-center justify-center rounded-full
-                border border-[#C7A35A]/70 text-[#C7A35A] hover:bg-[#C7A35A]/20 hover:scale-110 transition"
+                border border-[#C7A35A]/70 text-[#C7A35A]
+                hover:bg-[#C7A35A]/20 hover:scale-110 transition"
               >
-                <FaFigma />
+                {project.title === "Real Estate" ? <SiVercel /> : <FaFigma />}
               </a>
             </div>
           </motion.div>
@@ -111,11 +113,12 @@ const Projects = () => {
       {/* See More Projects */}
       <div className="flex justify-center mt-16">
         <a
-          href="https://www.figma.com/design/qepK4mhKvnvaB5poJddAFZ/Untitled?node-id=0-1&p=f&t=4XPbk3N07qUfWocn-0"
+          href="https://www.figma.com/design/kqccNWZpp1f6IjswuYLiTT/My-UI-projects?t=08ut8GQhPGUSoQ02-0"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-10 py-4 rounded-full bg-white/20 backdrop-blur-lg border border-[#C7A35A]/50
-          text-[#C7A35A] font-bold tracking-wide hover:bg-[#C7A35A]/80 hover:text-white hover:scale-105 transition"
+          className="px-10 py-4 rounded-full bg-white/20 backdrop-blur-lg
+          border border-[#C7A35A]/50 text-[#C7A35A] font-bold tracking-wide
+          hover:bg-[#C7A35A]/80 hover:text-white hover:scale-105 transition"
         >
           See More Projects
         </a>

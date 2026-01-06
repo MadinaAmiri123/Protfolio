@@ -62,7 +62,7 @@ const Skills = () => {
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-semibold text-white"
+          className="text-4xl md:text-5xl font-semibold text-[#C7A35A]"
         >
           Skills & Expertise
         </motion.h2>
