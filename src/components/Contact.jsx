@@ -1,206 +1,3 @@
-// import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
-// import { useRef, useState } from "react";
-// import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-
-// const Contact = () => {
-//   const formRef = useRef();
-//   const [loading, setLoading] = useState(false);
-//   const [status, setStatus] = useState("");
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setStatus("");
-
-//     emailjs
-//       .sendForm(
-//         "service_bwmtgtq",
-//         "template_mhcrjwy",
-//         formRef.current,
-//         "OxAEEhKwvf_TNfWPS"
-//       )
-//       .then(
-//         () => {
-//           setStatus("success");
-//           setLoading(false);
-//           formRef.current.reset();
-//         },
-//         () => {
-//           setStatus("error");
-//           setLoading(false);
-//         }
-//       );
-//   };
-
-//   return (
-//     <section
-//       id="contact"
-//       className="bg-gradient-to-b from-[#D0E1FF] to-[#A8CFFF] py-32 px-[6%] md:px-[10%]"
-//     >
-//       {/* Heading */}
-//       <motion.div
-//         initial={{ y: 30, opacity: 0 }}
-//         whileInView={{ y: 0, opacity: 1 }}
-//         transition={{ duration: 0.8 }}
-//         viewport={{ once: true }}
-//         className="text-center mb-24"
-//       >
-//         <h2 className="text-4xl md:text-5xl font-bold text-[#0F3F3A]">
-//           Get in Touch
-//         </h2>
-//         <p className="text-[#0F3F3A]/90 mt-4 max-w-xl mx-auto">
-//           I'm always open to discussing new projects, collaborations, or
-//           opportunities. Drop me a message and let's create something amazing
-//           together!
-//         </p>
-//       </motion.div>
-
-//       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-//         {/* LEFT CONTENT */}
-//         <motion.div
-//           initial={{ x: -80, opacity: 0 }}
-//           whileInView={{ x: 0, opacity: 1 }}
-//           transition={{ duration: 0.8 }}
-//           viewport={{ once: true }}
-//         >
-//           <p className="text-[#0F3F3A]/90 leading-7 mb-10 max-w-md">
-//             Have a question or want to work together? Reach out via email or
-//             connect with me on GitHub, LinkedIn, or WhatsApp. I’ll respond as
-//             soon as possible and I’m excited to hear from you!
-//           </p>
-
-//           <p className="text-[#0F3F3A]/80 mb-2 font-medium">Email</p>
-//           <a
-//             href="mailto:amirimadina2@gmail.com"
-//             className="text-[#0F3F3A] font-medium hover:underline"
-//           >
-//             amirimadina2@gmail.com
-//           </a>
-
-//           <div className="h-[1px] bg-[#0F3F3A]/20 mt-6 mb-10 w-64" />
-
-//           {/* SOCIAL */}
-//           <div className="flex gap-6 text-xl">
-//             <a
-//               href="https://github.com/MadinaAmiri123"
-//               target="_blank"
-//               className="w-11 h-11 bg-[#0F3F3A] text-white rounded-full flex items-center justify-center hover:scale-110 transition"
-//             >
-//               <FaGithub />
-//             </a>
-//             <a
-//               href="https://www.linkedin.com/in/adela-amiri"
-//               target="_blank"
-//               className="w-11 h-11 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:scale-110 transition"
-//             >
-//               <FaLinkedinIn />
-//             </a>
-//             <a
-//               href="https://wa.me/"
-//               target="_blank"
-//               className="w-11 h-11 bg-[#25D366] text-white rounded-full flex items-center justify-center hover:scale-110 transition"
-//             >
-//               <FaWhatsapp />
-//             </a>
-//           </div>
-//         </motion.div>
-
-//         {/* RIGHT FORM */}
-//         <motion.div
-//           initial={{ x: 80, opacity: 0 }}
-//           whileInView={{ x: 0, opacity: 1 }}
-//           transition={{ duration: 0.8 }}
-//           viewport={{ once: true }}
-//         >
-//           <form
-//             ref={formRef}
-//             onSubmit={sendEmail}
-//             className="space-y-7 bg-blue-200/30 backdrop-blur-xl
-//               border border-blue-400/40 rounded-3xl p-10 shadow-lg"
-//           >
-//             {/* Name */}
-//             <div>
-//               <label className="text-sm text-[#0F3F3A]/80">Name</label>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 required
-//                 placeholder="Your full name"
-//                 className="w-full mt-2 px-5 py-3 rounded-xl
-//                   bg-white/30 backdrop-blur border border-white/30
-//                   outline-none focus:bg-white/50
-//                   focus:shadow-[0_0_25px_rgba(15,63,58,0.4)]
-//                   transition-all duration-300"
-//               />
-//             </div>
-
-//             {/* Email */}
-//             <div>
-//               <label className="text-sm text-[#0F3F3A]/80">Email</label>
-//               <input
-//                 type="email"
-//                 name="email"
-//                 required
-//                 placeholder="Your email address"
-//                 className="w-full mt-2 px-5 py-3 rounded-xl
-//                   bg-white/30 backdrop-blur border border-white/30
-//                   outline-none focus:bg-white/50
-//                   focus:shadow-[0_0_25px_rgba(15,63,58,0.4)]
-//                   transition-all duration-300"
-//               />
-//             </div>
-
-//             {/* Message */}
-//             <div>
-//               <label className="text-sm text-[#0F3F3A]/80">Message</label>
-//               <textarea
-//                 name="message"
-//                 rows="5"
-//                 required
-//                 placeholder="Write your message..."
-//                 className="w-full mt-2 px-5 py-3 rounded-xl
-//                   bg-white/30 backdrop-blur border border-white/30
-//                   outline-none resize-none
-//                   focus:bg-white/50
-//                   focus:shadow-[0_0_25px_rgba(15,63,58,0.4)]
-//                   transition-all duration-300"
-//               />
-//             </div>
-
-//             {/* Button */}
-//             <motion.button
-//               whileHover={{ scale: 1.05 }}
-//               whileTap={{ scale: 0.97 }}
-//               disabled={loading}
-//               type="submit"
-//               className="w-full py-3 rounded-full
-//                 bg-[#0F3F3A] text-[#C89B5A] font-medium tracking-wide
-//                 disabled:opacity-50 transition"
-//             >
-//               {loading ? "Sending..." : "Send Message"}
-//             </motion.button>
-
-//             {/* Status */}
-//             {status === "success" && (
-//               <p className="text-green-600 text-center mt-2">
-//                 ✅ Message sent successfully
-//               </p>
-//             )}
-//             {status === "error" && (
-//               <p className="text-red-600 text-center mt-2">
-//                 ❌ Something went wrong, please try again.
-//               </p>
-//             )}
-//           </form>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Contact;
-
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
@@ -218,10 +15,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_bwmtgtq",
-        "template_mhcrjwy",
+        "service_oe1bvro",
+        "template_r9d517p",
         formRef.current,
-        "OxAEEhKwvf_TNfWPS"
+        "OxAEEhKwvf_TNfWPS",
       )
       .then(
         () => {
@@ -232,7 +29,7 @@ const Contact = () => {
         () => {
           setStatus("error");
           setLoading(false);
-        }
+        },
       );
   };
 
@@ -274,10 +71,10 @@ const Contact = () => {
 
           <p className="text-[#C7A35A] mb-2 font-medium">Email</p>
           <a
-            href="mailto:amirimadina2@gmail.com"
+            href="mailto:madinaamiri716@gmail.com"
             className="text-white font-medium hover:underline"
           >
-            amirimadina2@gmail.com
+            madinaamiri716@gmail.com
           </a>
 
           <div className="h-[1px] bg-gray-300/30 mt-6 mb-10 w-64" />

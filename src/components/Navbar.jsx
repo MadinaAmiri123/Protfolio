@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/mlogo.jpg";
 import { FaBars, FaTimes } from "react-icons/fa";
-import myCV from "../assets/Madina Amiri CV -2024.pdf";
+import myCV from "../assets/CV.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav
       className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl
-      backdrop-blur-xl bg-white/20 rounded-full shadow-lg px-6 py-3"
+backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
