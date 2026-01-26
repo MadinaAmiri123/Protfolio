@@ -102,7 +102,7 @@ backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
           </ul>
 
           <a
-            href="https://drive.google.com/file/d/1Iz5hiTkJ_7M-edcNtooP2wsXX8OwKGtN/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1QzQzsjCU98N07e_X5LEzdsRgQIfA1epq/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 bg-[#0F3F3A] text-[#C89B5A]
