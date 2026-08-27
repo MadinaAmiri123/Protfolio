@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+
+import Projects from "./components/Projects";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
 
       {/* Sections */}
       <Hero />
+
+      <Projects />
       <About />
       <Skills />
-      <Projects />
       <Contact />
     </div>
   );

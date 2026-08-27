@@ -5,13 +5,16 @@ const About = () => {
     <section
       id="about"
       className="bg-gradient-to-b from-[#0F172A] to-[#020617]
+
       py-28 md:py-36 px-[6%] md:px-[10%]"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 relative">
         {/* Divider */}
+
         <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-[#C7A35A]/40" />
 
         {/* ABOUT */}
+
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -41,6 +44,7 @@ const About = () => {
         </motion.div>
 
         {/* EDUCATION */}
+
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -61,12 +65,15 @@ const About = () => {
             there.
             <br />
             <br />
-            To continue learning, I joined{" "}
-            <span className="text-white font-medium">Upskill Academy</span>,
-            where I completed professional programs in UI/UX Design and Frontend
-            Development, and I am currently studying Backend Development. These
-            programs provided me with recognized certificates and practical
-            experience that support my goal of becoming a Full-Stack Developer.
+            To continue learning, I completed a professional program in UI/UX
+            Design at{" "}
+            <span className="text-white font-medium">Upskill Academy</span> and
+            Frontend Development at{" "}
+            <span className="text-white font-medium">Netlinks Company</span>{" "}
+            through a scholarship supported by{" "}
+            <span className="text-white font-medium">UNICEF</span>. I am
+            currently studying Backend Development, working toward my goal of
+            becoming a Full-Stack Developer.
           </p>
         </motion.div>
       </div>

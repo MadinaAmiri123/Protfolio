@@ -25,6 +25,11 @@ backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
             </a>
           </li>
           <li>
+            <a href="#projects" className="hover:text-[#C7A35A]">
+              Projects
+            </a>
+          </li>
+          <li>
             <a href="#about" className="hover:text-[#C7A35A]">
               About & Education
             </a>
@@ -34,11 +39,7 @@ backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
               Skills
             </a>
           </li>
-          <li>
-            <a href="#projects" className="hover:text-[#C7A35A]">
-              Projects
-            </a>
-          </li>
+
           <li>
             <a href="#contact" className="hover:text-[#C7A35A]">
               Contact
@@ -80,6 +81,11 @@ backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
               </a>
             </li>
             <li>
+              <a href="#projects" onClick={() => setOpen(false)}>
+                Projects
+              </a>
+            </li>
+            <li>
               <a href="#about" onClick={() => setOpen(false)}>
                 About & Education
               </a>
@@ -89,11 +95,7 @@ backdrop-blur-xl bg-white/20 rounded-2xl md:rounded-full shadow-lg px-6 py-3"
                 Skills
               </a>
             </li>
-            <li>
-              <a href="#projects" onClick={() => setOpen(false)}>
-                Projects
-              </a>
-            </li>
+
             <li>
               <a href="#contact" onClick={() => setOpen(false)}>
                 Contact
